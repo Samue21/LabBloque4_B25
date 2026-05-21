@@ -1,0 +1,18 @@
+package sam.dinopark.model.dinosaur;
+
+public class HerbivoreDinosaur extends Dinosaur {
+
+    protected HerbivoreDinosaur(int id, String name, String species, double feedingCostPerDay) {
+        super(id, name, species, 200.0);
+    }
+
+    @Override
+    public String getDiet() {
+        return "HERBIVORE";
+    }
+
+    @Override
+    public double getDangerLevel() {
+        return 0.2;
+    }
+}
