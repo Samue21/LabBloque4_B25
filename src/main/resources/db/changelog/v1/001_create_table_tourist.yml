@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: sam
+      changes:
+        - createTable:
+            tableName: tourist
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: status
+                  type: varchar(30)
+              - column:
+                  name: moneySpent
+                  type: numeric(10, 2)
+              - column:
+                  name: visitedZones
+                  type: text[]
+
+      rollback:
+        - dropTable:
+            tableName: tourist

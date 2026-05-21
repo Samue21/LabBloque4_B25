@@ -10,6 +10,6 @@ public class Enums {
 
     public enum VehicleStatus { AVAILABLE, IN_USE}
 
-    public enum TouristCagetory{ BASIC, PREMIUM, VIP }
+    public enum ExperienceType { BASIC, PREMIUM, VIP }
 
 }

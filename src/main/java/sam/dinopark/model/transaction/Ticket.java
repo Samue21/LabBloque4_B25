@@ -7,10 +7,10 @@ public class Ticket {
     private long id;
     private int touristId;
     private double price;
-    private TouristCagetory category;
+    private ExperienceType category;
     private LocalDateTime issuedAt;
 
-    public Ticket(long id, int touristId, double price, TouristCagetory category, LocalDateTime issuedAt) {
+    public Ticket(long id, int touristId, double price, ExperienceType category, LocalDateTime issuedAt) {
         this.id = id;
         this.touristId = touristId;
         this.price = price;
@@ -30,7 +30,7 @@ public class Ticket {
         return price;
     }
 
-    public TouristCagetory getCategory() {
+    public ExperienceType getCategory() {
         return category;
     }
 
