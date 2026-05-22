@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: 6
+      author: sam
+      changes:
+        - createTable:
+            tableName: detail_ticket
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: ticket_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_detail_ticket
+                    referencedTableName: ticket
+                    referencedColumnNames: id
+              - column:
+                  name: product_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_detail_product
+                    referencedTableName: product
+                    referencedColumnNames: id
+              - column:
+                  name: amount
+                  type: int
+              - column:
+                  name: price_at_sale
+                  type: numeric(10,2)
+      rollback:
+        - dropTable:
+            tableName: detail_ticket

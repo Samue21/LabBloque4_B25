@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: sam
+      changes:
+        - createTable:
+            tableName: events
+            columns:
+              - column:
+                  name: step
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: eventName
+                  type: VARCHAR(100)
+              - column:
+                  name: description
+                  type: VARCHAR(500)
+              - column:
+                  name: affected_entities
+                  type: VARCHAR(255)
+              - column:
+                  name: timestamp
+                  type: TIMESTAMP

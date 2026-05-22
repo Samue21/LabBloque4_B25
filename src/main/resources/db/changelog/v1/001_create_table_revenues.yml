@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: sam
+      changes:
+        - createTable:
+            tableName: revenues
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: type
+                  type: VARCHAR(50)
+              - column:
+                  name: amount
+                  type: DOUBLE
+              - column:
+                  name: touristId
+                  type: INT
+              - column:
+                  name: zone
+                  type: VARCHAR(100)
+              - column:
+                  name: timestamp
+                  type: TIMESTAMP

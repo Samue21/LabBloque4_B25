@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 8
+      author: sam
+      changes:
+        - createTable:
+            tableName: event_record
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nombre
+                  type: varchar(30)
+              - column:
+                  name: description
+                  type: varchar(255)
+              - column:
+                  name: cost_impact
+                  type: numeric(10,2)
+              - column:
+                  name: issue_at
+                  type: timestamp
+      rollback:
+        - dropTable:
+            tableName: event_record

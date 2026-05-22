@@ -14,12 +14,30 @@ public class Tourist {
     public Tourist(int id, String name) {
         this.id = id;
         this.name = name;
+        moneySpent = 0.00;
     }
 
-    public void spend(){
-
+    public int getId() {
+        return id;
     }
-    public void recordVisit(){
 
+    public String getName() {
+        return name;
+    }
+
+    public TouristStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(TouristStatus status) {
+        this.status = status;
+    }
+
+
+    public void spend(double amount){
+        moneySpent += amount;
+    }
+    public void recordVisit(String zone){
+        visitedZones.add(zone);
     }
 }
