@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: sam
+      changes:
+        - createTable:
+            tableName: worker
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: role
+                  type: varchar(31)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: daily_salary
+                  type: numeric(10,2)
+      rollback:
+        - dropTable:
+            tableName: worker

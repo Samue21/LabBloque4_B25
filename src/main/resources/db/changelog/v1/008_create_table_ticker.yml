@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5
+      author: sam
+      changes:
+        - createTable:
+            tableName: ticket
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: tourist_id
+                  type: int
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_ticket_tourist
+                    referencedTableName: tourist
+                    referencedColumnNames: id
+              - column:
+                  name: price
+                  type: numeric(10,2)
+              - column:
+                  name: category
+                  type: varchar(255)
+              - column:
+                  name: issue_at
+                  type: timestamp
+      rollback:
+        - dropTable:
+            tableName: ticket

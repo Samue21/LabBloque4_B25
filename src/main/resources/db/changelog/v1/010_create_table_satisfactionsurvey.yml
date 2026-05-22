@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 7
+      author: sam
+      changes:
+        - createTable:
+            tableName: satisfaction_survey
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: tourist_id
+                  type: int
+              - column:
+                  name: enclosure_id
+                  type: int
+              - column:
+                  name: score
+                  type: int
+      rollback:
+        - dropTable:
+            tableName: satisfaction_survey

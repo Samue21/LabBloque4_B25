@@ -12,4 +12,9 @@ public class Enums {
 
     public enum ExperienceType { BASIC, PREMIUM, VIP }
 
+    public enum EventType { DINOSAUR_ESCAPE, BLACKOUT, STORM, DEALS_HOUR, VEHICLE_FAILURE }
+
+    public enum ZoneStatus { OPERATIONAL, MAINTENANCE, EMERGENCY, CLOSED}
+
+
 }

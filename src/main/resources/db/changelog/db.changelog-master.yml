@@ -1,3 +1,23 @@
 databaseChangeLog:
   - include:
-      file: db/changelog/v1/001_create_table_tourist.yml
+      file: db/changelog/v1/001_create_table_revenues.yml
+  - include:
+      file: db/changelog/v1/002_create_table_expenses.yml
+  - include:
+      file: db/changelog/v1/003_create_table_events.yml
+#  - include:
+#      file: db/changelog/v1/004_create_table_tourist.yml
+#  - include:
+#      file: db/changelog/v1/005_create_table_dinosaur.yml
+#  - include:
+#      file: db/changelog/v1/006_create_table_worker.yml
+#  - include:
+#      file: db/changelog/v1/007_create_table_product.yml
+#  - include:
+#      file: db/changelog/v1/008_create_table_ticker.yml
+#  - include:
+#      file: db/changelog/v1/009_create_table_detailsticket.yml
+#  - include:
+#      file: db/changelog/v1/0010_create_table_satisfactionsurvey.yml
+#  - include:
+#      file: db/changelog/v1/0011_create_table_eventrecord.yml
